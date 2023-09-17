@@ -218,7 +218,6 @@ dispatcher = TGDispatcher(bot, db)
 
 @bot.message_handler(content_types=['text'])
 def m(message):
-    print("message!")
     global dispatcher, bot
     id_ = message.from_user.id
     mes_id = message.id
@@ -235,6 +234,7 @@ def t(call):
     dispatcher.handle_message(id_, inf)
     
 bot.polling(none_stop = True, interval = 1)
+
 
 
 
